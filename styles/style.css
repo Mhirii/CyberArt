@@ -1,0 +1,136 @@
+@import "sheet.css";
+@import "colors.css";
+
+:root {
+	background-color: #212121;
+}
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	color: var(--text2);
+}
+
+#navbar {
+	display: grid;
+	grid-template-columns: 30vw auto 30vw;
+	padding: 0px var(--padding-xxl);
+	height: 64px;
+	position: fixed;
+	top: 0;
+	z-index: 10;
+	backdrop-filter: blur(8px);
+}
+#navbar * {
+	transition: var(--transition-default);
+}
+
+#bar-leftside {
+	grid-column-start: 1;
+	grid-column-end: 2;
+	justify-self: left;
+}
+
+#bar-center {
+	grid-column-start: 2;
+	grid-column-end: 3;
+	justify-self: center;
+}
+
+#bar-rightside {
+	grid-column-start: 3;
+	grid-column-end: 4;
+	justify-self: right;
+}
+#bar-rightside > .nav-btn {
+	margin: var(--padding-s) var(--padding-s);
+	padding: var(--padding-s) var(--padding-m);
+}
+
+.bar-elm {
+	font-family: var(--text-font);
+	font-weight: 300;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.container {
+	overflow: hidden;
+	display: grid;
+	grid-template-columns: auto;
+}
+#bg-img1 {
+	z-index: -1;
+	position: relative;
+	top: 0px;
+	width: 100%;
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row-start: 1;
+}
+#section1 {
+	margin: 0;
+	padding-top: 96px;
+	padding-left: var(--padding-xxl);
+	padding-right: var(--padding-xxl);
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row-start: 1;
+	z-index: 1;
+	display: grid;
+	grid-template-columns: 260px 260px 260px 260px;
+	grid-template-rows: 260px 260px;
+	gap: 16px;
+	justify-items: center;
+	justify-self: center;
+}
+#section1-title {
+	grid-column-start: 2;
+	grid-column-end: 4;
+	grid-row-start: 1;
+	grid-row-end: 2;
+	justify-self: center;
+	align-self: center;
+	text-align: center;
+}
+#section1-title > p {
+	color: var(--primary-bright);
+	font-weight: 400;
+}
+#nft1 {
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 1;
+	grid-row-end: 2;
+}
+#nft2 {
+	grid-column-start: 4;
+	grid-column-end: 5;
+	grid-row-start: 1;
+	grid-row-end: 2;
+}
+#nft3 {
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 2;
+	grid-row-end: 3;
+}
+#nft4 {
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 2;
+	grid-row-end: 3;
+}
+#nft5 {
+	grid-column-start: 3;
+	grid-column-end: 4;
+	grid-row-start: 2;
+	grid-row-end: 3;
+}
+#nft6 {
+	grid-column-start: 4;
+	grid-column-end: 5;
+	grid-row-start: 2;
+	grid-row-end: 3;
+}

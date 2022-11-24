@@ -1,0 +1,216 @@
+@import "colors.css";
+
+/* #region GENERAL*/
+.flex-row {
+	display: flex;
+	flex-direction: row;
+}
+.flex-column {
+	display: flex;
+	flex-direction: column;
+}
+/* #endregion */
+
+/* #region nav-btn*/
+.nav-btn {
+	margin: var(--padding-s) var(--padding-l);
+	padding: var(--padding-s) var(--padding-m);
+	color: var(--text2);
+	cursor: pointer;
+}
+.nav-btn:hover {
+	color: var(--text0);
+	text-shadow: 0px 2px 4px var(--glow4);
+}
+.icon-btn {
+	border: 2px var(--text0) solid;
+	border-radius: 48px;
+	margin: var(--padding-s) var(--padding-l);
+	padding: var(--padding-s) var(--padding-m);
+	cursor: pointer;
+}
+.icon-btn > * {
+	color: var(--text0);
+}
+.icon-btn:hover {
+	text-shadow: 0px 2px 4px var(--primary-op6);
+}
+/* #endregion nav-btn*/
+
+/* #region searchbar*/
+.searchbar > * {
+	transition: var(--transition-default);
+}
+.searchbar {
+	margin: var(--padding-s) var(--padding-s);
+	padding: var(--padding-s) var(--padding-m);
+	cursor: pointer;
+}
+.searchbar > input {
+	width: 0px;
+	opacity: 0;
+	color: var(--text1);
+	background-color: transparent;
+	border: 0;
+}
+.searchbar > input:focus {
+	outline: 0;
+}
+.searchbar > i {
+	color: var(--text0);
+}
+.searchbar:hover > i {
+	text-shadow: 0px 2px 4px var(--glow4);
+}
+.searchbar-focus {
+	margin: var(--padding-l) var(--padding-l);
+	padding: var(--padding-s) var(--padding-m);
+	border: 2px solid;
+	border-radius: 8px;
+	border-color: var(--accent);
+	color: var(--inactive);
+}
+.searchbar-focus > input {
+	display: initial;
+	opacity: 1;
+	width: initial;
+}
+/* #endregion searchbar*/
+
+/* #region image*/
+.resize-bgimg {
+	width: 150%;
+	height: auto;
+}
+.filter-img {
+	filter: blur(8px) brightness(0.8) opacity(0.9);
+}
+/* #endregion */
+
+/* #region text*/
+.title1 {
+	font-family: var(--text-font);
+	color: var(--text0);
+	font-weight: 600;
+	font-size: 32pt;
+}
+.title2 {
+	font-family: var(--text-font);
+	color: var(--text0);
+	font-weight: 500;
+	font-size: 24pt;
+}
+.title3 {
+	font-family: var(--text-font);
+	color: var(--text0);
+	font-weight: 400;
+	font-size: 16pt;
+}
+.detail1 {
+	font-family: var(--detail-font);
+	color: var(--text0);
+	font-weight: 300;
+	font-size: 14pt;
+}
+.detail2 {
+	font-family: var(--detail-font);
+	color: var(--text0);
+	font-weight: 300;
+	font-size: 20pt;
+}
+.title-display1 {
+	font-family: var(--display-font);
+	color: var(--text0);
+	font-size: 18pt;
+	text-shadow: 0 0 5px rgb(255, 255, 255, 0.4),
+		2px 2px 6px var(--glow4);
+}
+/* #endregion */
+
+/* #region nft box*/
+.nft-box {
+	width: 260px;
+	height: 260px;
+	overflow: hidden;
+	border-radius: 16px;
+	display: grid;
+	grid-template-columns: auto auto;
+	cursor: pointer;
+}
+.nft-img {
+	grid-column-start: 1;
+	grid-column-end: 6;
+	grid-row-start: 1;
+	grid-row-end: 6;
+	height: 260px;
+	width: auto;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.nft-img > img {
+	height: auto;
+	width: 260px;
+	transition: all 0.3s ease-in-out;
+}
+.nft-box:hover img {
+	transform: scale(1.05);
+	filter: brightness(1.3);
+}
+.nft-available {
+	grid-column-start: 5;
+	grid-column-end: 6;
+	grid-row-start: 1;
+	grid-row-end: 6;
+	writing-mode: vertical-lr;
+	background-image: linear-gradient(
+		to bottom,
+		var(--accent),
+		var(--bg2)
+	);
+	padding: var(--padding-m) var(--padding-xs);
+	font-size: 20pt;
+	z-index: 2;
+}
+.nft-info {
+	grid-column-start: 1;
+	grid-column-end: 6;
+	grid-row-start: 4;
+	grid-row-end: 6;
+	align-self: center;
+
+	display: grid;
+	padding: var(--padding-l) var(--padding-m);
+	row-gap: 8px;
+	backdrop-filter: blur(4px);
+	z-index: 3;
+}
+.nft-name {
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row-start: 1;
+	grid-row-end: 2;
+	justify-self: left;
+	font-size: 24pt;
+	padding: none;
+}
+.nft-artist {
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 2;
+	grid-row-end: 3;
+	justify-self: left;
+	font-size: large;
+	padding: none;
+}
+.nft-price {
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 2;
+	grid-row-end: 3;
+	justify-self: right;
+	font-size: large;
+	padding: none;
+}
+/* #endregion */
