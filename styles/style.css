@@ -13,8 +13,9 @@
 }
 
 #navbar {
+	width: 100%;
 	display: grid;
-	grid-template-columns: 30vw auto 30vw;
+	grid-template-columns: auto auto auto;
 	padding: 0px var(--padding-xxl);
 	height: 64px;
 	position: fixed;
