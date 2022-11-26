@@ -7,3 +7,39 @@ COOOOL BUTTON ;)
 </button>
 =====================================================		
 =====================================================		
+			<div
+				class="sidebar-topbar-wrapper"
+				id="sidetopbar-btn"
+			>
+				<button
+					class="sidebar-element"
+					style="display: none"
+					id="topbar-reduced"
+				>
+					<div class="sidebar-label">
+						<h2>Expand</h2>
+					</div>
+					<div class="sidebar-btn">
+						<i class="fa-solid fa-chevron-right"></i>
+					</div>
+				</button>
+
+				<div class="sidebar-topbar" id="topbar-expanded">
+					<div class="st-elms">
+						<div class="st-elmnt-wrapper">
+							<div class="st-elmnt">
+								<i class="fa-solid fa-chevron-left"></i>
+							</div>
+						</div>
+						<div class="st-elmnt-wrapper">
+							<div class="st-elmnt">Section1</div>
+						</div>
+						<div class="st-elmnt-wrapper">
+							<div class="st-elmnt">Section2</div>
+						</div>
+						<div class="st-elmnt-wrapper">
+							<div class="st-elmnt">Section3</div>
+						</div>
+					</div>
+				</div>
+			</div>

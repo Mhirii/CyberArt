@@ -81,3 +81,18 @@ Array.from(document.getElementsByClassName("sidebar-item"))
       fsMenu.style.display = "initial"
     }
   }
+
+  //toggleSideTopbar
+  function  toggleSideTopbar(){
+    let sideTopBar = document.getElementById("sidetopbar-btn")
+
+    if (sideTopBar.classList.contains("sidebar-element-wrapper"))
+    {
+      sideTopBar.classList.remove("sidebar-element-wrapper")
+      sideTopBar.classList.add("sidebar-topbar-wrapper")
+    }
+    else{
+      sideTopBar.classList.add("sidebar-element-wrapper")
+      sideTopBar.classList.remove("sidebar-topbar-wrapper")
+    }
+  }

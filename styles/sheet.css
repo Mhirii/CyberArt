@@ -640,4 +640,16 @@
 	transform: translateX(0px) translateY(0px);
 	transition: all 0.7s ease-in-out;
 }
+.displayoff {
+	display: none;
+}
+.displayon {
+	display: initial;
+}
+.displayflex {
+	display: flex;
+}
+.displaygrid {
+	display: grid;
+}
 /* #endregion hidden and show*/

@@ -61,15 +61,100 @@
 	grid-template-columns: auto;
 }
 
+.sidebar-topbar-wrapper {
+	width: auto;
+	height: 68px;
+	display: flex;
+	align-items: center;
+	background: linear-gradient(
+		160deg,
+		var(--accent) 0%,
+		var(--primary) 25%,
+		var(--accent) 50%,
+		var(--primary) 75%,
+		var(--accent) 100%
+	);
+	background-size: 600% 600%;
+
+	-webkit-animation: GradientAnimation 12s ease infinite;
+	-moz-animation: GradientAnimation 12s ease infinite;
+	animation: GradientAnimation 12s ease infinite;
+
+	transition: transform 400ms ease;
+}
+
+.sidebar-topbar {
+	background: var(--bg2);
+	border: 0;
+	outline: 0;
+	position: relative;
+	height: 64px;
+	width: auto;
+	display: flex;
+	flex-direction: row;
+	place-items: center;
+	transition: transform 400ms ease;
+	cursor: pointer;
+}
+
+.sidebar-topbar-wrapper .sidebar-element {
+	display: none;
+}
+.st-elms {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+.st-elmnt-wrapper {
+	margin-left: var(--margin-m);
+	margin-right: var(--margin-m);
+	height: 52px;
+	border-radius: 2px;
+}
+.st-elmnt {
+	background-color: var(--bg2);
+	height: 50px;
+	min-width: 32px;
+	padding: 4px 8px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: var(--detail-font);
+	font-weight: 500;
+	font-size: 16pt;
+}
+
+.st-elmnt-wrapper:hover {
+	background: linear-gradient(
+		160deg,
+		var(--accent) 0%,
+		var(--primary) 25%,
+		var(--accent) 50%,
+		var(--primary) 75%,
+		var(--accent) 100%
+	);
+	background-size: 600% 600%;
+
+	-webkit-animation: GradientAnimation 4s ease infinite;
+	-moz-animation: GradientAnimation 4s ease infinite;
+	animation: GradientAnimation 4s ease infinite;
+}
+
+.st-elmnt-wrapper:hover .st-elmnt {
+	background-color: var(--shadow8);
+}
+/* #endregion */
+
 /* #region sidebar*/
 #sidebar {
 	position: fixed;
-	width: 160px;
+	width: auto;
 	height: auto;
 	display: grid;
 	row-gap: 16px;
 	z-index: 9;
-	top: 72px;
+	top: 32px;
 }
 .sidebar-element-wrapper {
 	width: 162px;
@@ -139,6 +224,10 @@
 }
 .sidebar-element > .sidebar-btn > i {
 	font-size: 16pt;
+}
+
+.sidebar-element-wrapper .sidebar-topbar {
+	display: none;
 }
 /* #endregion sidebar*/
 
