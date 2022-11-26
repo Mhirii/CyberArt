@@ -17,7 +17,7 @@
 	</head>
 	<body>
 		<!-- #region navbar-->
-		<div id="navbar">
+		<div id="navbar" style="display: none">
 			<div class="bar-elm flex-row" id="bar-leftside">
 				<h2 style="color: var(--primary)">LOGO</h2>
 			</div>
@@ -44,6 +44,98 @@
 				<div class="nav-btn icon-btn">
 					<i class="fa-solid fa-chevron-down"></i>
 				</div>
+			</div>
+		</div>
+
+		<div id="sidebar">
+			<div class="sidebar-element-wrapper">
+				<button class="sidebar-element">
+					<div class="sidebar-label">
+						<h2>Expand</h2>
+					</div>
+					<div class="sidebar-btn">
+						<i class="fa-solid fa-chevron-right"></i>
+					</div>
+				</button>
+			</div>
+			<div
+				class="sidebar-element-wrapper"
+				onclick="toggleFullscreenMenu()"
+			>
+				<button class="sidebar-element">
+					<div class="sidebar-label">
+						<h2>Menu</h2>
+					</div>
+					<div class="sidebar-btn">
+						<i class="fa-solid fa-bars"></i>
+					</div>
+				</button>
+			</div>
+
+			<div class="sidebar-element-wrapper">
+				<button class="sidebar-element">
+					<div class="sidebar-label">
+						<h2>Search</h2>
+					</div>
+					<div class="sidebar-btn">
+						<i class="fa-solid fa-magnifying-glass"></i>
+					</div>
+				</button>
+			</div>
+
+			<div class="sidebar-element-wrapper">
+				<button class="sidebar-element">
+					<div class="sidebar-label">
+						<h2>Account</h2>
+					</div>
+					<div class="sidebar-btn">
+						<i class="fa-regular fa-user"></i>
+					</div>
+				</button>
+			</div>
+
+			<div class="sidebar-element-wrapper">
+				<button class="sidebar-element">
+					<div class="sidebar-label">
+						<h2>Settings</h2>
+					</div>
+					<div class="sidebar-btn">
+						<i class="fa-solid fa-gear"></i>
+					</div>
+				</button>
+			</div>
+		</div>
+
+		<div id="fullscreen-menu">
+			<div id="menu">
+				<div id="sidebar-items">
+					<a href="/" class="sidebar-item">HOME</a>
+					<a href="/" class="sidebar-item">EXPLORE</a>
+					<a href="/" class="sidebar-item">BIDS</a>
+					<a
+						href="/"
+						class="sidebar-item"
+						onclick="toggleFullscreenMenu()"
+						>LEAVE</a
+					>
+				</div>
+				<div id="sidebar-bg-icon"></div>
+				<div
+					style="
+						background-image: url('img/logo2\ gradient\ outline.png');
+					"
+					id="sidebar-bg-icon2"
+				></div>
+				<div
+					style="
+						background-image: url('img/logo2\ gradient\ fill.png');
+					"
+					id="sidebar-bg-icon2-fill"
+				></div>
+				<div
+					style="background-image: url('img/vaporwave.jpg')"
+					id="sidebar-bg-icon3"
+				></div>
 			</div>
 		</div>
 		<!-- #endregion navbar-->
@@ -138,10 +230,17 @@
 					</div>
 				</div>
 				<img
-					id="bg-img1"
+					id="bg-img-right"
 					class="filter-img1"
 					style="z-index: 0"
-					src="img/gradient4.png"
+					src="img/gradient right.png"
+					alt=""
+				/>
+				<img
+					id="bg-img-left"
+					class="filter-img1"
+					style="z-index: 0"
+					src="img/gradient left.png"
 					alt=""
 				/>
 			</section>
@@ -207,10 +306,7 @@
 
 			<section id="section3" class="gradient-animation">
 				<div id="section3-headline ">
-					<div
-						class="title1 scroll-text1"
-						style="font-size: 69pt"
-					>
+					<div class="title1" style="font-size: 69pt">
 						GET THE
 						<span
 							class="scroll-text1 title1-highlight2 gradient-text"
@@ -224,9 +320,9 @@
 							>
 						</h2>
 					</div>
+					<br />
+					<br />
 				</div>
-				<br />
-				<br />
 				<div id="section3-container">
 					<div class="clip-box-wrapper hidden2">
 						<div class="clip-box">

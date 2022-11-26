@@ -57,3 +57,27 @@ window.addEventListener('scroll', function(e) {
   console.log("rate = "+rate)
   target.style.transform = 'translate3d(0px, -'+rate+'px, 0px)'
 });
+
+
+// sidebar logo
+const menu = document.getElementById("menu")
+Array.from(document.getElementsByClassName("sidebar-item"))
+  .forEach((item, index) => {
+    item.onmouseover = () =>{
+      menu.dataset.activeIndex = index;
+      console.log(menu)
+    }
+  })
+
+
+  // toggleFullscreenMenu
+  function toggleFullscreenMenu(){
+    let fsMenu = document.getElementById("fullscreen-menu")
+    if (fsMenu.style.display == "initial"){
+
+      fsMenu.style.display = "none"
+    }
+    else{
+      fsMenu.style.display = "initial"
+    }
+  }
