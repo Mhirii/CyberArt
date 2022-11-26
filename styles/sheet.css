@@ -82,6 +82,9 @@
 	width: 150%;
 	height: auto;
 }
+.filter-img1 {
+	filter: brightness(0.8) opacity(0.9);
+}
 .filter-img {
 	filter: blur(8px) brightness(0.8) opacity(0.9);
 }
@@ -118,12 +121,47 @@
 	font-weight: 300;
 	font-size: 20pt;
 }
+
+.detail1-highlight1 {
+	font-family: var(--detail-font);
+	color: var(--secondary);
+	text-shadow: 0px 2px 4px rgba(186, 218, 85, 0.2);
+	font-weight: 500;
+	font-size: 14pt;
+}
+.detail1-highlight2 {
+	font-family: var(--detail-font);
+	color: var(--text0);
+	font-weight: 500;
+	font-size: 14pt;
+}
+.detail2-highlight1 {
+	font-family: var(--detail-font);
+	color: var(--secondary);
+	font-weight: 400;
+	font-size: 20pt;
+}
+.detail2-highlight2 {
+	font-family: var(--detail-font);
+	color: var(--text0);
+	font-weight: 500;
+	font-size: 20pt;
+}
 .title-display1 {
 	font-family: var(--display-font);
 	color: var(--text0);
 	font-size: 18pt;
 	text-shadow: 0 0 5px rgb(255, 255, 255, 0.4),
 		2px 2px 6px var(--glow4);
+}
+.gradient-text {
+	background: -webkit-linear-gradient(
+		var(--accent),
+		var(--primary)
+	);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 /* #endregion */
 
@@ -214,3 +252,370 @@
 	padding: none;
 }
 /* #endregion */
+/* #region desc-box*/
+.desc-box {
+	height: 88px;
+	width: 256px;
+	background-color: var(--bg2);
+	border-radius: 4px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: var(--padding-l);
+}
+.desc-box-wrapp {
+	margin: var(--margin-l);
+	height: 92px;
+	width: 260px;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient(
+		160deg,
+		/* rgba(186, 218, 85, 0.8), */ rgba(20, 255, 236, 0.8),
+		rgba(13, 115, 119, 0.8),
+		rgba(174, 0, 251, 0.8)
+	);
+	border-radius: 4px;
+	transition: all 0.3s linear;
+}
+.desc-box-wrapp:hover {
+	background: linear-gradient(
+		160deg,
+		rgba(20, 255, 236, 1),
+		rgba(13, 115, 119, 0.9),
+		rgba(174, 0, 251, 1)
+	);
+	transition: all 0.3s linear;
+	transform: scale(1.01);
+	box-shadow: 0px 0px 15px 1px rgba(20, 255, 236, 0.1);
+}
+
+.desc-box-wrapp:nth-child(2) {
+	transition-delay: 200ms;
+}
+.desc-box-wrapp:nth-child(3) {
+	transition-delay: 400ms;
+}
+/* #endregion desc-box*/
+/* #region buttons*/
+/*   <button class="custom-btn btn-4"><span>Read More</span></button> */
+
+.btn {
+	width: 144px;
+	height: 40px;
+	color: #fff;
+	border-radius: 5px;
+	padding: 10px 25px;
+	font-weight: 500;
+	background: transparent;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	position: relative;
+	display: inline-block;
+	box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+		7px 7px 20px 0px rgba(0, 0, 0, 0.1),
+		4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+	outline: none;
+}
+.btn-1 {
+	background-color: var(--accent);
+	background-image: linear-gradient(
+		315deg,
+		var(--accent2) 0%,
+		var(--accent) 74%
+	);
+	border: none;
+	z-index: 1;
+}
+.btn-1 p {
+	transform: scale(1);
+	font-weight: 600;
+	color: white;
+	transition: all 0.3s linear;
+}
+.btn-1:after {
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 0;
+	bottom: 0;
+	left: 0;
+	z-index: -1;
+	border-radius: 5px;
+	background-color: var(--accent);
+	background-image: linear-gradient(
+		315deg,
+		var(--accent) 0%,
+		var(--primary) 74%
+	);
+	box-shadow: 0px 0px 20px 0px rgba(255, 255, 255, 0.2),
+		2px 2px 10px 0px rgba(0, 0, 0, 0.133),
+		0px 0px 20px 0px rgba(255, 255, 255, 0.2),
+		4px 4px 5px 0px rgba(0, 0, 0, 0.067);
+	transition: all 0.3s ease;
+}
+.btn-1:hover {
+	color: #fff;
+}
+.btn-1:hover:after {
+	top: 0;
+	height: 100%;
+}
+.btn-1:hover p {
+	transform: scale(1.02);
+	font-weight: 670;
+	color: var(--bg2);
+	transition: all 0.3s linear;
+}
+.btn-1:active {
+	top: 2px;
+}
+/*   <button class="custom-btn btn-1"><span>Read More</span></button> */
+
+/* #endregion */
+
+/* #region clip-box*/
+.clip-box-wrapper {
+	width: 232px;
+	height: 287px;
+	background-image: linear-gradient(
+		180deg,
+		var(--accent2) 0%,
+		var(--primary-op6) 70%,
+		var(--primary) 90%
+	);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	clip-path: polygon(
+		65% 0,
+		100% 25%,
+		100% 100%,
+		0 100%,
+		0 0
+	);
+	border-radius: 8px;
+	filter: saturate(0.9) brightness(1);
+	transition: filter 1s;
+}
+.clip-box-wrapper:hover {
+	filter: saturate(1.8) brightness(1.4);
+	transition: filter 1s;
+}
+.clip-box {
+	width: 230px;
+	height: 285px;
+	background-color: var(--bg2);
+	clip-path: polygon(
+		65% 0,
+		100% 25%,
+		100% 100%,
+		0 100%,
+		0 0
+	);
+	border-radius: 8px;
+	cursor: pointer;
+	transition: all 1s;
+	display: grid;
+	grid-template-rows: auto auto 64px;
+	grid-template-columns: auto auto auto;
+}
+.clip-box:hover {
+	background-color: var(--bg1);
+	transition: all 1s;
+}
+.clip-box h2 {
+	margin-top: var(--margin-xl);
+	padding: var(--padding-l);
+	padding-bottom: var(--padding-xs);
+
+	grid-row-start: 1;
+	grid-row-end: 2;
+	grid-column-start: 1;
+	grid-column-end: 4;
+
+	transform: translateY(0px);
+	text-shadow: 0px 2px 4px transparent;
+	transition: all 0.3s ease;
+}
+.clip-box:hover > h2 {
+	transform: translateY(-1px);
+	text-shadow: 0px 2px 4px var(--glow4);
+	transition: all 0.3s ease;
+}
+.clip-box p {
+	grid-row-start: 2;
+	grid-row-end: 3;
+	grid-column-start: 1;
+	grid-column-end: 4;
+
+	padding: var(--padding-l);
+	font-size: 12pt;
+	transform: translateX(0px);
+	text-shadow: 0px 2px 4px transparent;
+	transition: all 0.6s ease;
+}
+.clip-box:hover > p {
+	transform: translateX(-1px);
+	text-shadow: 0px 2px 4px var(--glow2);
+	transition: all 0.6s ease;
+}
+.clip-box > h1 {
+	font-family: var(--detail-font);
+	font-size: 40pt;
+	font-weight: 900;
+	color: var(--text2);
+	transition: all 0.7s ease;
+	text-align: center;
+
+	grid-row-start: 3;
+	grid-row-end: 4;
+	grid-column-start: 2;
+	grid-column-end: 3;
+}
+.clip-box:hover > h1 {
+	transform: translateY(2px) scale(1.004);
+	color: var(--text1);
+	transition: all 0.2s ease;
+}
+
+.clip-box > .clip-box-circle {
+	grid-row-start: 1;
+	grid-row-end: 4;
+	grid-column-start: 1;
+	grid-column-end: 4;
+	clip-path: ellipse(45% 25% at 50% 100%);
+	background-color: var(--glow1);
+	background-image: linear-gradient(
+		0deg,
+		transparent 0%,
+		var(--primary-op1) 10%,
+		var(--glow1) 70%
+	);
+	opacity: 0.1;
+	transition: all 1s;
+}
+.clip-box:hover > .clip-box-circle {
+	clip-path: ellipse(70% 50% at 50% 100%);
+	background-color: var(--glow1);
+	background-image: linear-gradient(
+		0deg,
+		transparent 0%,
+		var(--primary-op1) 10%,
+		var(--glow1) 70%
+	);
+	opacity: 0.7;
+	filter: brightness(1.1) saturate(1.2) blur(64px);
+	color: #fff;
+	transition: all 1s;
+}
+.clip-box-wrapper:nth-child(2) {
+	transition-delay: 200ms;
+}
+.clip-box-wrapper:nth-child(3) {
+	transition-delay: 400ms;
+}
+.clip-box-wrapper:nth-child(4) {
+	transition-delay: 600ms;
+}
+
+/* 	FOR WHEN BUTTON IS INSIDE CLIP BOX
+.clip-box .btn {
+	width: 80%;
+	height: 15%;
+	padding: 0px;
+	filter: saturate(1) brightness(1);
+	transition: filter 1s;
+}
+.clip-box .btn-1 {
+	width: 60%;
+	height: 15%;
+	padding: 0px;
+	justify-self: center;
+	align-self: center;
+}
+
+.clip-box .btn-1 > .detail1 {
+	font-size: 14pt;
+	padding: 4px;
+	font-size: medium;
+}
+
+.clip-box-wrapper:hover .btn-1 {
+	filter: saturate(0.8) brightness(0.6);
+	transition: filter 1s;
+} */
+/* #endregion clip-box*/
+
+/* #region gradient animation*/
+.gradient-animation {
+	background: linear-gradient(
+		160deg,
+		var(--accent-op4) 0%,
+		var(--primary-op2) 22%,
+		var(--accent-op1) 40%,
+		var(--bg2) 50%,
+		var(--primary-op1) 75%,
+		var(--secondary-op2) 85%,
+		var(--accent-op8) 100%
+	);
+	background-size: 600% 600%;
+
+	-webkit-animation: GradientAnimation 12s ease infinite;
+	-moz-animation: GradientAnimation 12s ease infinite;
+	animation: GradientAnimation 12s ease infinite;
+}
+@-webkit-keyframes GradientAnimation {
+	0% {
+		background-position: 0% 52%;
+	}
+	50% {
+		background-position: 100% 49%;
+	}
+	100% {
+		background-position: 0% 52%;
+	}
+}
+@-moz-keyframes GradientAnimation {
+	0% {
+		background-position: 0% 52%;
+	}
+	50% {
+		background-position: 100% 49%;
+	}
+	100% {
+		background-position: 0% 52%;
+	}
+}
+@keyframes GradientAnimation {
+	0% {
+		background-position: 0% 52%;
+	}
+	50% {
+		background-position: 100% 49%;
+	}
+	100% {
+		background-position: 0% 52%;
+	}
+}
+/* #endregion */
+
+/* #region hidden and show*/
+.hidden {
+	opacity: 0;
+	transform: translateX(100%);
+	transition: all 0.7s ease-in-out;
+}
+.hidden2 {
+	transform: translateX(-50%);
+	opacity: 0;
+	transition: all 0.7s ease-in-out;
+}
+.show {
+	opacity: 1;
+	transform: translateX(0px) translateY(0px);
+	transition: all 0.7s ease-in-out;
+}
+/* #endregion hidden and show*/

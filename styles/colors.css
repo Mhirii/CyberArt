@@ -2,22 +2,55 @@
 
 :root {
 	/* #region COLORS*/
-	--bg1: #212121;
-	--bg2: #323232;
-	--bg3: #424242;
-	--primary-dark: #0d7377;
+	--bg1: rgb(12, 8, 22);
+	--bg2: rgb(20, 14, 36);
+	--bg3: rgb(26, 19, 44);
+	--primary-dark: rgb(13, 115, 119);
 	--primary: #14ffec;
 	--primary-bright: #b5ffd9;
 	--seccondary-bg: #170055;
-	--secondary: #3e00ff;
-	--accent: #ae00fb;
+	--secondary: rgb(186, 218, 85);
+	--accent: rgb(174, 0, 251);
+	--accent1: rgb(159, 15, 226);
+	--accent2: rgb(87, 35, 207);
+
+	--accent-op1: rgba(174, 0, 251, 0.1);
+	--accent-op2: rgba(174, 0, 251, 0.2);
+	--accent-op4: rgba(174, 0, 251, 0.4);
+	--accent-op6: rgba(174, 0, 251, 0.6);
+	--accent-op8: rgba(174, 0, 251, 0.8);
+
+	--accent1-op1: rgba(159, 15, 226, 0.1);
+	--accent1-op2: rgba(159, 15, 226, 0.2);
+	--accent1-op4: rgba(159, 15, 226, 0.4);
+	--accent1-op6: rgba(159, 15, 226, 0.6);
+	--accent1-op8: rgba(159, 15, 226, 0.8);
+
+	--accent2-op1: rgba(87, 35, 207, 0.1);
+	--accent2-op2: rgba(87, 35, 207, 0.2);
+	--accent2-op4: rgba(87, 35, 207, 0.4);
+	--accent2-op6: rgba(87, 35, 207, 0.6);
+	--accent2-op8: rgba(87, 35, 207, 0.8);
+
+	--primary-op1: rgba(20, 255, 236, 0.1);
+	--primary-op2: rgba(20, 255, 236, 0.2);
+	--primary-op4: rgba(20, 255, 236, 0.4);
+	--primary-op6: rgba(20, 255, 236, 0.6);
+	--primary-op8: rgba(20, 255, 236, 0.8);
+
+	--secondary-op1: rgba(186, 218, 85, 0.1);
+	--secondary-op2: rgba(186, 218, 85, 0.2);
+	--secondary-op4: rgba(186, 218, 85, 0.4);
+	--secondary-op6: rgba(186, 218, 85, 0.6);
+	--secondary-op8: rgba(186, 218, 85, 0.8);
+
+	/* --secondary: #3e00ff; */
+	/* --accent: #ae00fb; */
 	--text0: #fff;
 	--text1: #eee;
 	--text2: #ddd;
 	--inactive: #aaa;
 	--disabled: #666;
-
-	--primary-op6: rgba(20, 255, 236, 0.6);
 
 	--glow1: rgba(255, 255, 255, 0.1);
 	--glow2: rgba(255, 255, 255, 0.2);

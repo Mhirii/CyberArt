@@ -2,7 +2,7 @@
 @import "colors.css";
 
 :root {
-	background-color: #212121;
+	background-color: var(--bg1);
 }
 
 * {
@@ -21,7 +21,7 @@
 	position: fixed;
 	top: 0;
 	z-index: 10;
-	backdrop-filter: blur(8px);
+	backdrop-filter: blur(2px);
 }
 #navbar * {
 	transition: var(--transition-default);
@@ -70,6 +70,12 @@
 	grid-column-end: 3;
 	grid-row-start: 1;
 }
+#bg-img img {
+	height: 100%;
+	width: auto;
+}
+
+/* #region section1*/
 #section1 {
 	margin: 0;
 	padding-top: 96px;
@@ -96,7 +102,7 @@
 	text-align: center;
 }
 #section1-title > p {
-	color: var(--primary-bright);
+	color: var(--primary);
 	font-weight: 400;
 }
 #nft1 {
@@ -135,3 +141,61 @@
 	grid-row-start: 2;
 	grid-row-end: 3;
 }
+/* #endregion section 1*/
+/* #region section2*/
+#section2 {
+	width: 100vw;
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row-start: 2;
+	background-repeat: repeat;
+	background-position-x: center;
+	background-position-y: center;
+	background-size: 8vw;
+	background-color: var(--bg1);
+}
+#section2 > .section-container{
+	background-color: var(	--shadow2);
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: radial-gradient(
+  rgba(12, 8, 22,0.5),
+	rgba(12, 8, 22, 0.75)	,
+	rgba(12, 8, 22, 0.85)	,
+	rgba(12, 8, 22, 1)	,
+	rgba(12, 8, 22, 1)	
+) ;
+background-position-x: center;
+background-position-y: center;
+background-size: 100%;
+transition: background-color 0.3s ease-in-out;
+}
+#section2 > .section-container:hover{
+
+	background-color: transparent;
+}
+/* #endregion section2*/
+
+/* #region section3*/
+#section3 {
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row-start: 3;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* background-color: bisque; */
+	background-color: var(--bg2);
+	height: 720px;
+}
+#section3-container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#section3-container > .clip-box-wrapper{
+	margin: var(--margin-m);
+}
+/* #endregion section3/
