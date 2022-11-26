@@ -58,7 +58,6 @@
 }
 .container {
 	overflow: hidden;
-	display: grid;
 	grid-template-columns: auto;
 }
 #bg-img1 {
@@ -67,8 +66,9 @@
 	top: 0px;
 	width: 100%;
 	grid-column-start: 1;
-	grid-column-end: 3;
+	grid-column-end: 2;
 	grid-row-start: 1;
+	grid-row-end: 2;
 }
 #bg-img img {
 	height: 100%;
@@ -77,13 +77,24 @@
 
 /* #region section1*/
 #section1 {
+	width: 100%;
 	margin: 0;
+
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row-start: 1;
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: auto;
+}
+.section1-container {
 	padding-top: 96px;
 	padding-left: var(--padding-xxl);
 	padding-right: var(--padding-xxl);
 	grid-column-start: 1;
-	grid-column-end: 3;
+	grid-column-end: 2;
 	grid-row-start: 1;
+	grid-row-end: 2;
 	z-index: 1;
 	display: grid;
 	grid-template-columns: 260px 260px 260px 260px;
@@ -154,26 +165,25 @@
 	background-size: 8vw;
 	background-color: var(--bg1);
 }
-#section2 > .section-container{
-	background-color: var(	--shadow2);
+#section2 > .section-container {
+	background-color: var(--shadow2);
 	width: 100vw;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	background-image: radial-gradient(
-  rgba(12, 8, 22,0.5),
-	rgba(12, 8, 22, 0.75)	,
-	rgba(12, 8, 22, 0.85)	,
-	rgba(12, 8, 22, 1)	,
-	rgba(12, 8, 22, 1)	
-) ;
-background-position-x: center;
-background-position-y: center;
-background-size: 100%;
-transition: background-color 0.3s ease-in-out;
+		rgba(12, 8, 22, 0.5),
+		rgba(12, 8, 22, 0.75),
+		rgba(12, 8, 22, 0.85),
+		rgba(12, 8, 22, 1),
+		rgba(12, 8, 22, 1)
+	);
+	background-position-x: center;
+	background-position-y: center;
+	background-size: 100%;
+	transition: background-color 0.3s ease-in-out;
 }
-#section2 > .section-container:hover{
-
+#section2 > .section-container:hover {
 	background-color: transparent;
 }
 /* #endregion section2*/
@@ -184,18 +194,28 @@ transition: background-color 0.3s ease-in-out;
 	grid-column-end: 3;
 	grid-row-start: 3;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	/* background-color: bisque; */
 	background-color: var(--bg2);
 	height: 720px;
 }
-#section3-container{
+#section3-container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-wrap: wrap;
 }
-#section3-container > .clip-box-wrapper{
+#section3-container > .clip-box-wrapper {
 	margin: var(--margin-m);
 }
+#section3-headline {
+	padding: var(--padding-xl);
+	align-self: center;
+	text-align: center;
+}
+
 /* #endregion section3/
+
+/* #region */

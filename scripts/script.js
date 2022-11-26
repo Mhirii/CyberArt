@@ -15,7 +15,7 @@ function seachbarClicked(elm){
 // scroll animation
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) =>{
-    console.log(entry)
+    // console.log(entry)
       if (entry.isIntersecting){
         entry.target.classList.add('show');
         entry.target.classList.remove('hidden');
@@ -32,7 +32,7 @@ hiddenElements.forEach((el) => observer.observe(el));
 
 const observer2 = new IntersectionObserver((entries) => {
   entries.forEach((entry) =>{
-    console.log(entry)
+    // console.log(entry)
       if (entry.isIntersecting){
         entry.target.classList.add('show');
         entry.target.classList.remove('hidden2');
@@ -46,3 +46,14 @@ const observer2 = new IntersectionObserver((entries) => {
 
 const hiddenElements2 = document.querySelectorAll('.hidden2');
 hiddenElements2.forEach((el) => observer2.observe(el));
+
+
+window.addEventListener('scroll', function(e) {
+  const target = document.querySelector('.scroll-text1');
+  console.log(target)
+  var scrolled = window.pageYOffset;
+  console.log(scrolled)
+  var rate = (scrolled - 360 ) * 0.5 / 10 - 15;
+  console.log("rate = "+rate)
+  target.style.transform = 'translate3d(0px, -'+rate+'px, 0px)'
+});
