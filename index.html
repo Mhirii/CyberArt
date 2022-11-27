@@ -113,7 +113,10 @@
 				</button>
 			</div>
 
-			<div class="sidebar-element-wrapper">
+			<div
+				class="sidebar-element-wrapper"
+				onclick="toggleAuth()"
+			>
 				<button class="sidebar-element">
 					<div class="sidebar-label">
 						<h2>Account</h2>
@@ -170,6 +173,69 @@
 		</div>
 		<!-- #endregion navbar-->
 
+		<!-- #region auth screen-->
+
+		<div id="auth">
+			<div id="auth-wrapper">
+				<div class="auth-main">
+					<input
+						type="checkbox"
+						id="chk"
+						aria-hidden="true"
+					/>
+
+					<div class="signup">
+						<form>
+							<label for="chk" aria-hidden="true"
+								>Sign up</label
+							>
+							<input
+								type="text"
+								name="txt"
+								placeholder="Username"
+								required=""
+							/>
+							<input
+								type="email"
+								name="email"
+								placeholder="Email"
+								required=""
+							/>
+							<input
+								type="password"
+								name="pswd"
+								placeholder="Password"
+								required=""
+							/>
+							<button class="btn btn-1">Sign up</button>
+						</form>
+					</div>
+
+					<div class="login">
+						<form>
+							<label for="chk" aria-hidden="true"
+								>Login</label
+							>
+							<input
+								type="email"
+								name="email"
+								placeholder="Email"
+								required=""
+							/>
+							<input
+								type="password"
+								name="pswd"
+								placeholder="Password"
+								required=""
+							/>
+							<button class="btn btn-1">Login</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- #endregion auth screen-->
 		<!-- #region cotnent-->
 		<div class="container">
 			<section id="section1">

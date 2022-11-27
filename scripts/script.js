@@ -96,3 +96,40 @@ Array.from(document.getElementsByClassName("sidebar-item"))
       sideTopBar.classList.remove("sidebar-topbar-wrapper")
     }
   }
+
+  function leaveSideTopbar(){
+    let sideTopBar = document.getElementById("sidetopbar-btn")
+
+    if (sideTopBar.classList.contains("sidebar-topbar-wrapper"))
+    {
+      sideTopBar.classList.add("sidebar-element-wrapper")
+      sideTopBar.classList.remove("sidebar-topbar-wrapper")
+    }
+  }
+
+  function toggleAuth(){
+    let auth = document.getElementById("auth")
+    if (auth.style.display == "none"){
+      auth.style.display = "flex"
+    }
+    else{
+      auth.style.display = "none"
+    }
+  }
+
+
+
+  document.onkeydown = function(evt) {
+    evt = evt || window.event;
+    var isEscape = false;
+    if ("key" in evt) {
+        isEscape = (evt.key === "Escape" || evt.key === "Esc");
+    } else {
+        isEscape = (evt.keyCode === 27);
+    }
+    if (isEscape) {
+      leaveSideTopbar()
+      document.getElementById("fullscreen-menu").style.display = "none"
+      document.getElementById("auth").style.display = "none"
+    }
+};
