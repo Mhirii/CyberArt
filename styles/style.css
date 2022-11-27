@@ -11,6 +11,7 @@
 	margin: 0;
 	color: var(--text2);
 }
+
 /* #region old navbar*/
 #navbar {
 	width: 100%;
@@ -738,6 +739,135 @@
 .sec3bigfont {
 	font-size: 69pt;
 }
+/* #endregion */
+
+/* #region footer*/
+#footer {
+	width: 100%;
+	height: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+	padding: var(--padding-l) var(--padding-g);
+	color: #fff;
+	background: var(--bg2);
+	-webkit-font-smoothing: antialiased;
+}
+#footer > div {
+	margin: var(--margin-xl) var(--margin-m);
+}
+.footer-desc {
+	display: flex;
+	flex-direction: column;
+	justify-content: left;
+	align-items: flex-start;
+	width: 256px;
+}
+.footer-desc img {
+	width: 256px;
+}
+.footer-desc .detail1 {
+	font-size: medium;
+}
+
+.footer-etc {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: left;
+	min-width: 256px;
+	width: 25vw;
+	height: auto;
+}
+.footer-etc > a {
+	text-decoration: none;
+	padding: var(--padding-l);
+	font-size: x-large;
+}
+
+.footer-social-icons {
+	width: 220px;
+	min-width: 220px;
+	display: block;
+	margin: 0 auto;
+}
+.footer-social-icons > .detail1 {
+	font-size: x-large;
+}
+.social-icon {
+	color: #fff;
+}
+ul.social-icons {
+	margin-top: var(--margin-l);
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.social-icons li {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 72px;
+	width: 72px;
+	background-color: var(--bg3);
+	-o-transition: 0.5s;
+	-ms-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+	cursor: pointer;
+}
+.social-icons a {
+	color: #fff;
+	text-decoration: none;
+}
+.fa-facebook {
+	font-size: xx-large;
+
+	padding: 10px 14px;
+}
+#fb:hover {
+	background-color: #3d5b99;
+}
+.fa-twitter {
+	font-size: xx-large;
+	padding: 10px 12px;
+}
+#twt:hover {
+	background-color: #00aced;
+}
+.fa-rss {
+	font-size: xx-large;
+	padding: 10px 14px;
+}
+#rss:hover {
+	background-color: #eb8231;
+}
+.fa-youtube {
+	font-size: xx-large;
+	padding: 10px 14px;
+}
+#yt:hover {
+	background-color: #e64a41;
+}
+.fa-linkedin {
+	padding: 10px 14px;
+	font-size: xx-large;
+}
+#lkd:hover {
+	background-color: #0073a4;
+}
+.fa-github {
+	padding: 10px 14px;
+	font-size: xx-large;
+}
+#gth:hover {
+	background-color: #5a32a3;
+}
+
 /* #endregion */
 
 /* #region responsiveness */

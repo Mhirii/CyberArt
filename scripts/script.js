@@ -133,3 +133,5 @@ Array.from(document.getElementsByClassName("sidebar-item"))
       document.getElementById("auth").style.display = "none"
     }
 };
+
+
