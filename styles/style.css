@@ -3,6 +3,7 @@
 
 :root {
 	background-color: var(--bg1);
+	--card-color: rgb(32, 22, 44);
 }
 
 * {
@@ -741,6 +742,98 @@
 }
 /* #endregion */
 
+/* #region section4*/
+
+#section4 {
+	color: var(--text1);
+	padding: var(--padding-xl) var(--padding-g);
+	background-color: var(--bg4);
+}
+.section4-container {
+	min-height: 100vh;
+	overflow: hidden;
+	margin: 0px;
+	padding: 0px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+#collection-cards {
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 8px;
+	max-width: 916px;
+	width: calc(100% - 20px);
+}
+#collection-cards:hover > .card > .card-border {
+	opacity: 1;
+}
+
+.card {
+	background-color: rgba(255, 255, 255, 0.06);
+	cursor: pointer;
+	position: relative;
+	height: 260px;
+	width: 300px;
+	border-radius: 8px;
+}
+
+.card:hover::before {
+	opacity: 1;
+}
+.card::before,
+.card > .card-border {
+	position: absolute;
+	content: "";
+	opacity: 0;
+	transition: opacity 500ms;
+	border-radius: inherit;
+	height: 100%;
+	width: 100%;
+	left: 0px;
+	top: 0px;
+}
+.card::before {
+	background: radial-gradient(
+		800px circle at var(--mouse-x) var(--mouse-y),
+		rgba(209, 110, 255, 0.1),
+		transparent 40%
+	);
+	z-index: 3;
+}
+.card > .card-border {
+	background: radial-gradient(
+		400px circle at var(--mouse-x) var(--mouse-y),
+		rgba(177, 124, 241, 0.5),
+		transparent 40%
+	);
+	z-index: 1;
+}
+.card > .card-content {
+	background-color: var(--card-color);
+	border-radius: inherit;
+	height: calc(100% - 2px);
+	width: calc(100% - 2px);
+	position: relative;
+	margin: 1px;
+	z-index: 2;
+}
+
+.card-content > .c-title {
+}
+
+/* 
+.card-content > .c-img
+.card-content > .c-owner
+.card-content > .c-price 
+*/
+
+/* #endregion */
+
 /* #region footer*/
 #footer {
 	width: 100%;
@@ -777,8 +870,7 @@
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: left;
-	min-width: 256px;
-	width: 25vw;
+	width: auto;
 	height: auto;
 }
 .footer-etc > a {
